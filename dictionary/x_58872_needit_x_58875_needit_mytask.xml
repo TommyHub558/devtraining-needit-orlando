@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="MyTask" max_length="40" name="x_58872_needit_x_58875_needit_mytask" type="collection">
+        <element default="true" label="Accept" max_length="40" name="accept" type="boolean"/>
+        <element attributes="encode_utf8=false" label="Assigned to" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Estimated" mandatory="true" max_length="40" name="estimated" type="glide_duration"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Record of task" max_length="1024" name="record_of_task" type="url"/>
+        <element label="Reference number" max_length="40" name="reference_number" read_only="true" type="integer"/>
+        <element attributes="encode_utf8=false" label="Request for" max_length="32" name="request_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Raison" mandatory="true" max_length="1000" name="u_string_5" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="When need it" max_length="40" name="when_needit" type="glide_date"/>
+        <index name="index">
+            <element name="request_for"/>
+        </index>
+        <index name="index2">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>
